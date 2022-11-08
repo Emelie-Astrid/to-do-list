@@ -31,27 +31,25 @@ function displayToDo() {
     let toDoLi = document.createElement("li");
 
     toDoArr.forEach((toDo) => {
-        // toDoLi.innerHTML="";
-        toDoLi.innerText = toDo
-        toDoLi.innerHTML += `<label> <input type="checkbox" value="2"</label>`
-        // toDoLi.innerHTML += `<input type="checkbox" value="2"><label>${toDo}</label></input>`
+        toDoLi.innerHTML="";
+        toDoLi.innerHTML += `<input type="checkbox" value="2"><label>${toDo}</label></input>`
     })
     
     toDoList.append(toDoLi);
 }
 
-// Function remove checkboxes - - - - - - - - - - - - - - - - - - 
+// Function remove checked - - - - - - - - - - - - - - - - - - - -
 function removeCheckboxes() {
     
     let allCheckedBoxes = document.querySelectorAll("input[type='checkbox']:checked");
 
     allCheckedBoxes.forEach((box) => {
-        box.parentElement.parentElement.remove();
+        box.parentElement.remove();
         toDoArr.splice(parseInt(box.value)-1, 1);
     });
 }
         
-// Buttons and keys - - - - - - - - - - - - - - - - - - - - - - - - -
+// Buttons and keys - - - - - - - - - - - - - - - - - - - - - - - 
 addBtn.addEventListener("click", () =>{
     addToDo();
 });

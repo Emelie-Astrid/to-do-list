@@ -12,6 +12,6 @@ ul {
     list-style-position: inside;
 }
 
-input:checked label { 
+input:checked + label {
     text-decoration: line-through; 
 }
