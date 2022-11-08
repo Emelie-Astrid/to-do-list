@@ -1,0 +1,13 @@
+body {
+    background: lightblue}
+
+div {
+    background: lightyellow;
+    padding: 50px;
+    width: 350px;
+}
+
+ul {
+    list-style: none;
+    list-style-position: inside;
+}
