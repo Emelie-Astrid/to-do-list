@@ -16,7 +16,7 @@ function addToDo() {
     let arrInput = toDoInput.value;
 
     if (arrInput === "") {
-        messageText.innerText = "Please add a new prompt"
+        messageText.innerText = "Please add a new to do"
         return false;
     } else {
         toDoArr.push(arrInput);
@@ -31,7 +31,7 @@ function displayToDo() {
     let toDoLi = document.createElement("li");
 
     toDoArr.forEach((toDo) => {
-        toDoLi.innerHTML="";
+        toDoLi.innerHTML = "";
         toDoLi.innerHTML += `<input type="checkbox" value="2"><label>${toDo}</label></input>`
     })
     
